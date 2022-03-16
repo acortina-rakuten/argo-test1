@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuard-ax
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: kuard-ax
+  template:
+    metadata:
+      labels:
+        app: kuard-ax
+    spec:
+      containers:
+      - image: gcr.io/kuar-demo/kuard-amd64:blue 
+        name: kuard-ax
+        ports:
+        - containerPort: 8080
