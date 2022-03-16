@@ -14,7 +14,7 @@ spec:
         app: kuard-ax
     spec:
       containers:
-      - image: gcr.io/kuar-demo/kuard-amd64:blue 
+      - image: gcr.io/kuar-demo/kuard-amd64:green
         name: kuard-ax
         ports:
         - containerPort: 8080
